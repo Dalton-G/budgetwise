@@ -1,0 +1,21 @@
+meta {
+  name: create_transaction
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/transaction
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "income",
+    "amount": "100",
+    "description": "Shipped a new website for APU",
+    "category": "Freelance",
+    "account": "Bank"
+  }
+}

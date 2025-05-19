@@ -1,0 +1,25 @@
+meta {
+  name: update_transaction
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/transaction/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 4
+}
+
+body:json {
+  {
+    "type": "expense",
+    "amount": "200",
+    "description": "Groceries",
+    "category": "Food",
+    "account": "Bank"
+  }
+}

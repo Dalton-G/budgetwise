@@ -1,0 +1,23 @@
+meta {
+  name: update_order_status
+  type: http
+  seq: 6
+}
+
+patch {
+  url: {{baseUrl}}/staff/update-order-status
+  body: json
+  auth: inherit
+}
+
+headers {
+  staff-name: Rudory
+  content-type: application/json
+}
+
+body:json {
+  {
+    "id": "bc0c2f28-e314-4df3-b763-123728d6a4bb",
+    "status": "completed"
+  }
+}

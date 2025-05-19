@@ -1,0 +1,16 @@
+meta {
+  name: greet_user_with_restaurant
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/greet?name=dalton&restaurant=KFC
+  body: none
+  auth: inherit
+}
+
+params:query {
+  name: dalton
+  restaurant: KFC
+}
